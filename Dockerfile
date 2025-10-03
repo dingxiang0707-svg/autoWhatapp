@@ -9,8 +9,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # 复制代码
 COPY . .
 
-# 暴露端口
-EXPOSE 8000
+# 暴露端口（Zeabur 会自动映射到正确的端口）
+EXPOSE 8080
 
-# 启动命令
-CMD ["uvicorn", "main:app"]
+# 启动命令 - 使用 Python 脚本启动以便读取环境变量
+CMD ["python", "main.py"]

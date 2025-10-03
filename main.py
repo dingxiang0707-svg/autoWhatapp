@@ -349,8 +349,8 @@ if __name__ == "__main__":
     import uvicorn
     import os
     
-    # 读取 Zeabur 的 PORT 环境变量，如果没有则默认 8000
-    port = int(os.getenv("PORT", 8000))
+    # 读取 Zeabur 的 PORT 环境变量，如果没有则默认 8080
+    port = int(os.getenv("PORT", 8080))
     print(f"Starting server on port {port}")
     
     uvicorn.run(app, host="0.0.0.0", port=port)
